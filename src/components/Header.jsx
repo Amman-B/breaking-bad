@@ -20,7 +20,8 @@ const useStyles = makeStyles({
     width: "30%",
   },
     searchBarInput: {
-    marginLeft: 35,
+      marginLeft: 35,
+      paddingRight: 35
   },
   searchIcon: {
     position: "absolute",
@@ -40,7 +41,7 @@ const Header = () => {
             <Box>
               <SearchIcon className={classes.searchIcon} />
             </Box>
-            <InputBase className={classes.searchBarInput} />
+            <InputBase fullWidth className={classes.searchBarInput} />
           </Box>
         </Toolbar>
       </AppBar>
