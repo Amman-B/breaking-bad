@@ -30,7 +30,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Header = () => {
+const Header = ( props ) => {
   const classes = useStyles();
   return (
     <>
@@ -41,7 +41,12 @@ const Header = () => {
             <Box>
               <SearchIcon className={classes.searchIcon} />
             </Box>
-            <InputBase fullWidth className={classes.searchBarInput} />
+            <InputBase
+              fullWidth
+              autoFocus
+              placeholder="Search character"
+              onChange={(e) => props.getText(e.target.value)}
+              className={classes.searchBarInput} />
           </Box>
         </Toolbar>
       </AppBar>
