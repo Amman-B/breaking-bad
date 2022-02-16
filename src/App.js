@@ -7,8 +7,7 @@ function App() {
   const [data, setData] = useState([]); //set initial data state to an array
 
   useEffect(() => {
-    /* useEffect react hook to get data array asynchronously
-    and log it */
+    /* useEffect react hook to get data array asynchronously */
 
     const getData = async () => {
       const result = await fetchData(text);
