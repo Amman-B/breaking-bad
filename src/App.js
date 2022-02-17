@@ -2,7 +2,16 @@ import Header from "./components/Header";
 import { useEffect, useState } from "react";
 import { fetchData } from "./service/api";
 import CharacterList from './components/CharacterList';
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  background: {
+    background: "linear-gradient(to right, #232526, #414345)"
+  },
+});
+
 function App() {
+  const classes = useStyles();
   const [text, setText] = useState(""); //set initial text state to empty string
   const [data, setData] = useState([]); //set initial data state to an array
 
@@ -25,10 +34,10 @@ function App() {
   }
 
   return (
-    <>
+    <div className={classes.background}>
       <Header getText={getText} />
       <CharacterList data={data} />
-    </>
+    </div>
   );
 }
 

@@ -19,9 +19,9 @@ const useStyles = makeStyles({
     padding: "0px 10px",
     width: "30%",
   },
-    searchBarInput: {
-      marginLeft: 35,
-      paddingRight: 35
+  inputBase: {
+    marginLeft: 35,
+    paddingRight: 35,
   },
   searchIcon: {
     position: "absolute",
@@ -36,17 +36,21 @@ const Header = ( props ) => {
     <>
       <AppBar position="static">
         <Toolbar className={classes.toolBar}>
+          {/* Header logo */}
           <img src={logo} alt="logo" className={classes.logo} />
           <Box className={classes.searchBar}>
             <Box>
               <SearchIcon className={classes.searchIcon} />
             </Box>
+
+            {/* Search bar */}
             <InputBase
               fullWidth
               autoFocus
-              placeholder="Search character"
+              placeholder="Search Character"
               onChange={(e) => props.getText(e.target.value)}
-              className={classes.searchBarInput} />
+              className={classes.inputBase}
+            />
           </Box>
         </Toolbar>
       </AppBar>
