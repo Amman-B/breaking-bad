@@ -6,7 +6,8 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   background: {
-    background: "linear-gradient(to right, #232526, #414345)"
+    background: "linear-gradient(to right, #232526, #414345)",
+    paddingBottom: 20
   },
 });
 
